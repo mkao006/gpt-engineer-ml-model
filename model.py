@@ -1,11 +1,44 @@
 import xgboost as xgb
 import os
+from dataclasses import dataclass
 
 class FeatureProcessor:
     """
     Processes the raw features before they are passed to the model.
+        # Placeholder for feature processing logic
+        return features
+
+@dataclass
+class RequestData:
+    """
+    Represents the structure of the JSON request.
+    """
+    user_name: str
+    age: int
+    country: str
+
+    def validate(self):
+        if not isinstance(self.user_name, str) or not isinstance(self.age, int) or not isinstance(self.country, str):
+            raise ValueError("Invalid data types for user_name, age, or country.")
+
     """
     def process(self, features):
+        # Placeholder for feature processing logic
+        return features
+
+@dataclass
+class RequestData:
+    """
+    Represents the structure of the JSON request.
+    """
+    user_name: str
+    age: int
+    country: str
+
+    def validate(self):
+        if not isinstance(self.user_name, str) or not isinstance(self.age, int) or not isinstance(self.country, str):
+            raise ValueError("Invalid data types for user_name, age, or country.")
+
         # Placeholder for feature processing logic
         return features
 

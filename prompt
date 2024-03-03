@@ -1,1 +1,1 @@
-Add a new class that would process the feature before calling the model
+The request is a json with 3 fields, user name, age, country. Add new classess to handle the json request, and make sure the fields have the type validated
