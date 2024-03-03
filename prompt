@@ -1,0 +1,3 @@
+Create a webservice in Python that takes a request and then returns a prediction
+Assume an xgboost model is trained, the webservice will load the training articat and then use the model to make a prediction
+The webservice is to be deployed on Kserve

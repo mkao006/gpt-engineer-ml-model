@@ -1,0 +1,12 @@
+apiVersion: "serving.kserve.io/v1beta1"
+kind: "InferenceService"
+metadata:
+  name: "xgboost-predictor"
+spec:
+  predictor:
+    containers:
+      - image: "xgboost-predictor-image:latest"
+        name: "kserve-container"
+        env:
+          - name: MODEL_PATH
+            value: "/app/model.json"
